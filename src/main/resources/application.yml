@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    data: data.sql
+    hikari:
+      password: postgres
+      username: postgres
+    url: jdbc:postgresql://localhost:5432/postgresLocalDB?default_database=postgresLocalDB
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  security:
+    oauth2:
+      client:
+        registration:
+         google:
+            clientId: 423064442819-6isfr2ut6go0vg9rnfe14je24lnibvsn.apps.googleusercontent.com
+            clientSecret: YOUR-GMAIL-OAUTH-SECRET
+            scope:
+             - email
+             - profile
+
+
+#  spring.datasource.hikari.password=postgres
+#  spring.datasource.hikari.username=postgres
+#  spring.datasource.url=jdbc:postgresql://localhost:5432/postgresLocalDB?default_database=postgresLocalDB
+logger:
+  log:
+    level: all

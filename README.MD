@@ -2,6 +2,11 @@
 ```aidl
 spring-boot:run -f pom.xml
 ```
+#### Add this for stopping at debug point
+```aidl
+in VM option under 'Runner' configuration
+-Dspring-boot.run.fork=false
+```
 
 ## What actually worked for me?
 ```
